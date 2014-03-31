@@ -16,7 +16,7 @@
         // Disqus Comments
         
         $('.showDisqus').on('click', function(){   // click event of the show comments button
-			var disqus_shortname = 'shilohstream';
+			var disqus_shortname = '';
 			//var disqus_identifier = '{{url absolute="true"}}'; // needs to be unique...
 
 			$.ajax({
