@@ -1,17 +1,26 @@
 /**
- * Main JS file for Casper behaviours
+ * Main JS file for Jasper behaviours
  */
 
 /*globals jQuery, document */
 (function ($) {
     "use strict";
 
-    $(document).ready(function(){
-
         // On the home page, move the blog icon inside the header 
         // for better relative/absolute positioning.
 
         //$("#blog-logo").prependTo("#site-head-content");
+        
+        // Fade on scroll
+		$(window).on('scroll', function() {
+			var st = $(this).scrollTop();
+			var top_offset = 600
+			$('#site-head-content').css({
+				'opacity' : (1-st/top_offset),
+				'top' : (st*-.2)
+			});
+		});
+		    
         
         // Disqus Comments
         
@@ -29,6 +38,5 @@
 		    $(this).fadeOut();  // remove the show comments button
 		});
         
-    });
 
 }(jQuery));
