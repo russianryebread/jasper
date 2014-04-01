@@ -1,7 +1,7 @@
 Jasper Ghost Theme
 ==================
 
-A [FarmSoft Studios](http://www.farmsoftstudios.com/) theme for [Ghost](http://github.com/tryghost/ghost/), based heavily on the original Casper theme.
+A [FarmSoft Studios](http://www.farmsoftstudios.com/) theme for [Ghost](http://github.com/tryghost/ghost/), based heavily on the original Casper theme.  You can see a live demo on my [personal site](http://bible.shilohstream.com).
 
 
 ## Copyright & License
