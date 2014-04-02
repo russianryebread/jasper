@@ -384,6 +384,10 @@ table.plain {
     background-size: cover;
 }
 
+#site-head-content {
+	position: relative;
+}
+
 /* The small image banner on the top of pages/posts */
 .page-head {
     padding: 20px 0;
@@ -621,6 +625,23 @@ table.plain {
     margin: 4rem 0 0 0;
     padding: 4rem 0 0 0;
     border-top: #EBF2F6 1px solid;
+    height: 100px;
+}
+
+.post-footer div.authorIcon {
+	margin: 0 25px 0 0;
+	height: 100px;
+	float: left;
+	padding-top: 12.5px;
+}
+
+.post-footer .authorIcon img {
+    height: 75px;
+    width: 75px;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    box-shadow: #fff 0 0 0 5px;
 }
 
 .post-footer h4 {
@@ -659,6 +680,56 @@ table.plain {
 
 .post-footer .share a:hover {
     color: #50585D;
+}
+
+
+/* ==========================================================================
+   6. Tag archive
+   ========================================================================== */
+
+.archive-template .site-head {
+    height: auto;
+    padding-bottom: 5rem;
+}
+
+.archive-template .site-head a {
+    color: #fff;
+}
+
+.archive-template .blog-logo {
+    display: block;
+    margin-top: 5rem;
+}
+
+.tag-archive-header {
+    padding: 20px 0;
+    text-align: center;
+    max-width: 700px;
+    margin: 4rem auto;
+    border-bottom: 1px solid #EBF2F6;
+    position: relative;
+}
+
+.tag-archive-header:after {
+    display: block;
+    content: "";
+    width: 7px;
+    height: 7px;
+    border: #E7EEF2 1px solid;
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    margin-left: -5px;
+    background: #fff;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    border-radius: 100%;
+    box-shadow: #fff 0 0 0 5px;
+}
+
+.archive-template .blog-title {
+    display: inline-block;
+    padding: 2.5rem 0;
 }
 
 
@@ -774,6 +845,33 @@ table.plain {
 
 .site-footer a:hover {
     color: #50585D;
+}
+
+.footer-nav ul {
+	margin: 0 auto;
+	width: 50%;
+}
+
+.footer-nav ul li {
+	list-style-image: none;
+	display: block;
+	float: left;
+	padding: 0;
+	margin: 0;
+}
+
+.footer-nav ul li:after {
+/* 	content: " | "; */
+}
+
+.footer-nav li a {
+	padding: 4px 10px;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.inner {
+	clear: both;
 }
 
 .poweredby .icon-ghost {
@@ -1023,7 +1121,14 @@ table.plain {
 
     .post-footer {
         text-align: center;
+        height: auto;
     }
+
+	.post-footer div.authorIcon {
+		float: none;
+		margin: 0;
+		padding-bottom: 20px;
+	}
 
     .post-footer .author {
         margin: 0 0 2rem 0;
