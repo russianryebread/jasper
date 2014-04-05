@@ -1,18 +1,19 @@
 var refTagger = {
 	settings: {
-		bibleVersion: "ESV",			
+		bibleVersion: "ESV",
+		socialSharing: [],
 		roundCorners: true,			
 		tagChapters: true,
 		customStyle : {
 			heading: {
 				backgroundColor : "#d9d9d9",
 				color : "#666666",
-				fontFamily : "Tahoma, Verdana, Segoe, sans-serif",
+				fontFamily : "'Source Sans Pro', Tahoma, Verdana, sans-serif",
 				fontSize : "14px"
 			},
 			body   : {
 				color : "#919191",
-				fontFamily : "Tahoma, Verdana, Segoe, sans-serif",
+				fontFamily : "Tahoma, Verdana, sans-serif",
 				fontSize : "12px",
 				moreLink : {
 					color: "#d9d9d9"

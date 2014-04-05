@@ -48,5 +48,7 @@
 		    $(this).fadeOut();  // remove the show comments button
 		});
         
+        // Shameless self-promotion
+        console.log("Yo, fellow dev. Check out our homepage, and find out about our other goodies: http://www.farmsoftstudios.com")
 
 }(jQuery));

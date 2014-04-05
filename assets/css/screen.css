@@ -471,7 +471,7 @@ table.plain {
     font-weight: 300;
     font-family: 'Merriweather', serif;
     letter-spacing: 0;
-    font-variant: small-caps;
+/*     font-variant: small-caps; */
 }
 
 .content {
@@ -597,9 +597,9 @@ table.plain {
 
 /* Tweak the .post wrapper style */
 .post-template .post {
-    margin-top: 0;
+    margin: 0 auto;
     border-bottom: none;
-    padding-bottom: 0;
+    padding-bottom: 4rem;
 }
 
 /* Kill that stylish little circle that was on the border, too */
@@ -771,6 +771,23 @@ table.plain {
 }
 
 
+.button {
+	cursor: pointer;
+	background: none;
+	width: auto;
+    border: #8a9ba8 1px solid;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: border ease 0.3s;
+    font-family: 'Source Sans Pro', sans-serif;
+    font-weight: 100;
+    color: #58636b;
+    text-align: center;
+    font-size: 1.8rem;
+    height: 30px;
+    padding: 0 20px;
+}
+
 /* ==========================================================================
    7. Pagination - Tools to let you flick between pages
    ========================================================================== */
@@ -780,7 +797,8 @@ table.plain {
     position: relative;
     width: 80%;
     max-width: 700px;
-    margin: 4rem auto;
+    margin: 4rem auto 0 auto;
+    padding-bottom: 4rem;
     font-family: 'Source Sans Pro', sans-serif;
     font-size: 1.3rem;
     color: #9EABB3;
