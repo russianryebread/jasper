@@ -6,12 +6,9 @@
 
 {{#if image}}
 <header id="site-head" class="main-header tag-head {{#if image}}" style="background-image: url({{image}}){{else}}{{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
-   <nav>
-       <ul>
-           <li><a href="{{@blog.url}}">Home</a></li>
-           <li><a href="/about/">About</a></li>
-       </ul>
-   </nav>
+   
+   {{navigation}}
+
     <div class="vertical">
         <div id="site-head-content" class="inner">
             <h1 class="blog-title">{{post.name}}</h1>
@@ -23,7 +20,9 @@
 
 <header id="site-head" class="page-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
     <a class="backArrow" href="{{@blog.url}}"><img class="back_button" src="/assets/img/back.svg" width="40px" height="40px"></a>
+    
     {{navigation}}
+    
 </header>
 {{/if}}
 <main class="content {{^if image}}pagepost{{/if}}" role="main">
