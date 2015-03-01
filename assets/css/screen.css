@@ -597,7 +597,7 @@ table.plain {
 
 /* Tweak the .post wrapper style */
 .post-template .post {
-    margin: 0 auto;
+    /*margin: 0 auto;*/
     border-bottom: none;
     padding-bottom: 4rem;
 }

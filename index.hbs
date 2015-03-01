@@ -5,11 +5,9 @@
 
 {{! The big featured header on the homepage, with the site logo and description }}
 <header id="site-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-   <nav>
-	   <ul>
-	       <li><a href="/about/">About</a></li>
-	   </ul>
-   </nav>
+    
+    {{navigation}}
+
     <div class="vertical">
         <div id="site-head-content" class="inner">
 
