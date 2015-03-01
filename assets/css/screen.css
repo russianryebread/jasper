@@ -190,7 +190,7 @@ blockquote p {
 
 blockquote small {
     display: inline-block;
-    margin: 0.8em 0 0.8em 1.5em;;
+    margin: 0.8em 0 0.8em 1.5em;
     font-size:0.9em;
     color: #ccc;
 }
@@ -331,11 +331,9 @@ table tbody > tr:nth-child(odd) > th {
     background-color: #f6f6f6;
 }
 
-table.plain {
-    tbody > tr:nth-child(odd) > td,
-    tbody > tr:nth-child(odd) > th {
-        background: transparent;
-    }
+table.plain tbody > tr:nth-child(odd) > td,
+table.plain tbody > tr:nth-child(odd) > th {
+    background: transparent;
 }
 
 
