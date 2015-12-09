@@ -1,11 +1,25 @@
 {{!< default}}
 
+{{#if image}}
+<header id="site-head" class="main-header page-head" style="background-image: url({{image}})">
+
+   {{navigation}}
+
+    <div class="vertical">
+        <div id="site-head-content" class="inner">
+            <h1 class="blog-title">{{post.name}}</h1>
+        </div>
+    </div>
+</header>
+
+{{else}}
+
 <header id="site-head" class="page-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
-    <a class="backArrow" href="{{@blog.url}}"><img class="back_button" src="/assets/img/back.svg" width="40px" height="40px"></a>
-   
-    {{navigation}}
+
+  {{navigation}}
 
 </header>
+{{/if}}
 
 <main class="content pagepost" role="main">
 

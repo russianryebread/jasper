@@ -54,7 +54,7 @@
     text-decoration: none;
 }
 
-/* Each icon is created by inserting the corret character into the 
+/* Each icon is created by inserting the corret character into the
    content of the :before pseudo element. Like a boss. */
 .icon-ghost:before {
     content: "\e000";
@@ -288,8 +288,8 @@ kbd {
     font-weight: bold;
     background: #f4f4f4;
     border-radius: 4px;
-    box-shadow: 
-        0 1px 0 rgba(0, 0, 0, 0.2), 
+    box-shadow:
+        0 1px 0 rgba(0, 0, 0, 0.2),
         0 1px 0 0 #fff inset;
 }
 
@@ -429,7 +429,7 @@ table.plain tbody > tr:nth-child(odd) > th {
     text-transform: uppercase;
 }
 
-.page-head nav ul li a:hover {
+.page-head nav ul li a:hover, .page-head nav ul li a.current {
 	background-color: rgba(255,255,255,0.4)
 }
 
@@ -993,9 +993,9 @@ table.plain tbody > tr:nth-child(odd) > th {
     }
 
     #site-head {
-        -webkit-box-sizing: border-box; 
+        -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
-        box-sizing: border-box; 
+        box-sizing: border-box;
         min-height: 340px;
         padding: 0;
     }
@@ -1053,18 +1053,18 @@ table.plain tbody > tr:nth-child(odd) > th {
         margin-top: 20px;
         box-shadow: 0px 0px 13px rgba(0,0,0,0.56);
     }
-    
+
     #site-head {
 	    display: block;
 	    max-height: 300px;
     }
-    
+
     .content {
 	    margin-top: 340px;
 	    padding: 0;
 	    padding-bottom: 1rem;
 	}
-	
+
 	.post {
         width:auto;
         font-size: 0.8em;
@@ -1082,13 +1082,13 @@ table.plain tbody > tr:nth-child(odd) > th {
 
 @media only screen and (max-width: 500px) {
 
-    .inner, 
+    .inner,
     .pagination {
         width: auto;
         margin-left: 16px;
         margin-right: 16px;
     }
-    
+
     .content {
 	    margin-top: 300px;
 	}
@@ -1100,7 +1100,7 @@ table.plain tbody > tr:nth-child(odd) > th {
     .blog-description {
         font-size: 1.5rem;
     }
-    
+
     .post {
         width:auto;
         font-size: 0.8em;
@@ -1108,7 +1108,7 @@ table.plain tbody > tr:nth-child(odd) > th {
         padding-top: 16px;
         margin: 0 16px;
     }
-    
+
     h1, h2 {
         font-size: 3rem;
         line-height: 1.1em;

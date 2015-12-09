@@ -1,10 +1,10 @@
-  {{^is "home"}}
-    <a class="backArrow" href="{{@blog.url}}"><img class="back_button" src="/assets/img/back.svg" width="40px" height="40px"></a>
-  {{/is}}
   <nav>
+    {{^is "home"}}
+      <a class="backArrow" href="{{@blog.url}}"><img class="back_button" src="/assets/img/back.svg" width="40px" height="40px"></a>
+    {{/is}}
     <ul>
       {{#foreach navigation}}
-        <li class="nav-{{slug}}{{#if current}} nav-current{{/if}}" role="presentation"><a href="{{url absolute="true"}}">{{label}}</a></li>
+        <li class="nav-{{slug}}" role="presentation"><a href="{{url absolute="true"}}" class="{{#if current}}current{{/if}}">{{label}}</a></li>
       {{/foreach}}
     </ul>
   </nav>
