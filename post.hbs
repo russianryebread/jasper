@@ -5,13 +5,14 @@
 {{#post}}
 
 {{#if image}}
-<header id="site-head" class="main-header tag-head {{#if image}}" style="background-image: url({{image}}){{else}}{{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
+<header id="site-head" class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}{{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
 
    {{navigation}}
 
     <div class="vertical">
         <div id="site-head-content" class="inner">
-            <h1 class="blog-title">{{post.name}}</h1>
+            <h1 class="blog-title">{{title}}</h1>
+            <span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='MMMM DD, YYYY'}}</time> {{#if tags}}on {{tags separator=" | "}}{{/if}}</span>
         </div>
     </div>
 </header>
@@ -29,10 +30,10 @@
     <article class="{{post_class}}">
 
         {{! Everything below outputs content of the the post which has been published }}
-
+        {{^if image}}
         <h1 class="post-title">{{{title}}}</h1>
         <span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='MMMM DD, YYYY'}}</time> {{#if tags}}on {{tags separator=" | "}}{{/if}}</span>
-
+        {{/if}}
         <section class="post-content">
             {{content}}
         </section>
