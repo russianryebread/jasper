@@ -4,33 +4,34 @@
     the {body} of the default.hbs template, which contains our header/footer. }}
 {{#post}}
 
-{{#if image}}
-<header id="site-head" class="main-header post-head {{#if image}}" style="background-image: url({{image}}){{else}}{{#if @blog.cover}}" style="background-image: url({{@blog.cover}}){{else}}no-cover{{/if}}{{/if}}">
+{{#if feature_image}}
+<header id="site-head" class="main-header post-head" style="background-image: url({{feature_image}})">
 
-   {{navigation}}
+    {{navigation}}
 
     <div class="vertical">
         <div id="site-head-content" class="inner">
             <h1 class="blog-title">{{title}}</h1>
-            <span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='MMMM DD, YYYY'}}</time> {{#if tags}}on {{tags separator=" | "}}{{/if}}</span>
+            <span class="post-meta"><time datetime="{{date format=" YYYY-MM-DD "}}">{{date format='MMMM DD, YYYY'}}</time>
+                {{#if tags}}on {{tags separator=" | "}}{{/if}}</span>
         </div>
     </div>
 </header>
 
 {{else}}
 
-<header id="site-head" class="page-head" {{#if @blog.cover}}style="background-image: url({{@blog.cover}})"{{/if}}>
+<header id="site-head" class="page-head" {{#if @blog.cover_image_image}}style="background-image: url({{@blog.cover_image_image}})"{{/if}}>
 
     {{navigation}}
 
 </header>
 {{/if}}
-<main class="content {{^if image}}pagepost{{/if}}" role="main">
+<main class="content {{^if feature_image}}pagepost{{/if}}" role="main">
 
     <article class="{{post_class}}">
 
         {{! Everything below outputs content of the the post which has been published }}
-        {{^if image}}
+        {{^if feature_image}}
         <h1 class="post-title">{{{title}}}</h1>
         <span class="post-meta"><time datetime="{{date format="YYYY-MM-DD"}}">{{date format='MMMM DD, YYYY'}}</time> {{#if tags}}on {{tags separator=" | "}}{{/if}}</span>
         {{/if}}
@@ -40,15 +41,15 @@
 
         <footer class="post-footer">
 
-            {{#if author}}
+            {{#if primary_author}}
                 <section class="author">
-	                {{#if author.image}}
-	                	<div class="authorIcon">
-	                		<img src="{{author.image}}" alt="Blog Logo" />
-						</div>
-	                {{/if}}
-                    <h4>{{author.name}}</h4>
-                    <p>{{author.bio}}</p>
+                    {{#if primary_author.profile_image}}
+                        <div class="authorIcon">
+                            <img src="{{primary_author.profile_image}}" alt="Blog Logo" />
+                        </div>
+                    {{/if}}
+                    <h4>{{primary_author.name}}</h4>
+                    <p>{{primary_author.bio}}</p>
                 </section>
             {{/if}}
 
@@ -72,8 +73,8 @@
         </footer>
 
         <section class="comments">
-         	<a class="showDisqus disqus-button" href="{{url absolute="true"}}#disqus_thread">Comment on: {{{title}}}</a>
-         	<div id="disqus_thread"></div>
+             <a class="showDisqus disqus-button" href="{{url absolute="true"}}#disqus_thread">Comment on: {{{title}}}</a>
+             <div id="disqus_thread"></div>
         </section>
 
         {{/post}}
