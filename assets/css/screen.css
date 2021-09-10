@@ -401,7 +401,7 @@ table.plain tbody > tr:nth-child(odd) > th {
 }
 
 /* page nav */
-#site-head nav ul {
+#site-head ul.nav {
 	list-style-image: none;
 	position: absolute;
 	top: 11px;
@@ -410,14 +410,14 @@ table.plain tbody > tr:nth-child(odd) > th {
 	padding: 0;
 }
 
-#site-head nav ul li {
+#site-head ul.nav li {
 	display: block;
 	float: left;
 	margin: 0;
 	padding: 0 0 0 10px;
 }
 
-#site-head nav ul li a {
+#site-head ul.nav li a {
 	border: 1px solid #fff;
 	color: #fff;
 	border-radius: 20px;
@@ -429,11 +429,11 @@ table.plain tbody > tr:nth-child(odd) > th {
     text-transform: uppercase;
 }
 
-.page-head nav ul li.nav-current a {
+.page-head ul.nav li.nav-current a {
 	background-color: rgba(0,0,0,0.4);
 }
 
-.page-head nav ul li a:hover {
+.page-head ul.nav li a:hover {
 	background-color: rgba(255,255,255,0.4)
 }
 
